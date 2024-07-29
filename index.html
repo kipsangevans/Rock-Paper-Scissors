@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="assets/Untitled design (2).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="backgroundMusic">
+        <source src="assets/Wakadinali - _Hizi Stance_ (Official Music Video).mp3" type="audio/mpeg">
+    </audio>
+
+   <div id="gameContainer">
+    <h1>WELCOME TO ROCK , PAPER , SCISSORS GAME !</h1>
+    <p id="result"> Make selection to START playing!</p> 
+    <div id="choice">
+        <p>Human choice : <span id="humanChoice"></span></p>
+        <p>Computer choice: <span id="computerChoice"></span></p>
+    </div>
+    <div class="buttons">
+        <button id="Rock" ><img src="assets/rock.png" alt="Rock">rock</button>
+        <button id="Paper">paper<img src="assets/paper.png" alt="Paper"></button>
+        <button id="Scissors"><img src="assets/Scissors.png" alt="Scissors">Scissor</button>
+    </div>
     
+   
+    <div id="scores">
+        <p>Human Score : <span id="humanScore">0</span></p>
+        <p>Computer Score: <span id="computerScore">0</span></p>
+    </div>
+</div>
+<div id="endMessage" style="display: none;">
+    <h1>The End</h1>
+    <button onclick="restartGame() ">START AGAIN</button>
+</div>
+<button id="music">playMusic</button>
+<footer>
+    <h2>Created by Vanso the owner of Universe</h2>
+</footer>
+   </div>
 </body>
 </html>
